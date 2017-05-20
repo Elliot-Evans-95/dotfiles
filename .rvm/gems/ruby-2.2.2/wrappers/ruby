@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if
+  [[ -s "/Users/elliot/.rvm/gems/ruby-2.2.2/environment" ]]
+then
+  source "/Users/elliot/.rvm/gems/ruby-2.2.2/environment"
+  exec ruby "$@"
+else
+  echo "ERROR: Missing RVM environment file: '/Users/elliot/.rvm/gems/ruby-2.2.2/environment'" >&2
+  exit 1
+fi

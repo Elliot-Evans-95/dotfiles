@@ -1,0 +1,1339 @@
++__rvm_make:0> make -j 1
+	CC = gcc
+	LD = ld
+	LDSHARED = gcc -dynamiclib
+	CFLAGS = -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration -Wdivision-by-zero -Wextra-tokens   -fno-common -pipe 
+	XCFLAGS = -D_FORTIFY_SOURCE=2 -fstack-protector -fno-strict-overflow -fvisibility=hidden -DRUBY_EXPORT
+	CPPFLAGS = -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I. -I.ext/include/x86_64-darwin15.0 -I./include -I.
+	DLDFLAGS = -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib  -install_name /Users/elliot/.rvm/rubies/ruby-2.1.10/lib/libruby.2.1.0.dylib -current_version 2.1.0 -compatibility_version 2.1.0  -fstack-protector -Wl,-u,_objc_msgSend -framework CoreFoundation  -fstack-protector -Wl,-u,_objc_msgSend -framework CoreFoundation  
+	SOLIBS = -lpthread -ldl -lobjc 
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 8.0.0 (clang-800.0.38)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+compiling main.c
+compiling dmydln.c
+compiling miniinit.c
+compiling miniprelude.c
+translating probes probes.d
+. ./vm_opts.h
+compiling array.c
+array.c:3901:12: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    return INT2FIX(-1);
+           ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+1 warning generated.
+compiling bignum.c
+bignum.c:4414:24: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                return INT2FIX(-1);
+                       ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+bignum.c:4421:30: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+            return hibitsx ? INT2FIX(-1) : INT2FIX(0);
+                             ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+bignum.c:4458:57: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+            return RBIGNUM_POSITIVE_P(x) ? INT2FIX(0) : INT2FIX(-1);
+                                                        ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+bignum.c:5308:30: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+        if (yd > 0.0) return INT2FIX(-1);
+                             ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+bignum.c:5325:20: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+            return INT2FIX(-1);
+                   ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+bignum.c:5329:20: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+            return INT2FIX(-1);
+                   ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+bignum.c:5335:20: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+            return INT2FIX(-1);
+                   ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+bignum.c:5345:12: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    return INT2FIX(-1);
+           ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+bignum.c:5410:51: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    if (RBIGNUM_SIGN(x) < RBIGNUM_SIGN(y)) return INT2FIX(-1);
+                                                  ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+bignum.c:5606:20: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    if (!n) return INT2FIX(-1);
+                   ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+bignum.c:5617:20: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+            return INT2FIX(-1);
+                   ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+bignum.c:6538:25: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    if (y == -1) return INT2FIX(-1);
+                        ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+bignum.c:6539:35: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    if (xn == 0) return hibitsx ? INT2FIX(-1) : LONG2FIX(y);
+                                  ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+13 warnings generated.
+compiling class.c
+class.c:1395:20: warning: implicit conversion loses integer precision: 'VALUE' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+    me_arg.recur = recur;
+                 ~ ^~~~~
+1 warning generated.
+compiling compar.c
+compiling complex.c
+compiling dir.c
+compiling dln_find.c
+compiling encoding.c
+compiling enum.c
+compiling enumerator.c
+compiling error.c
+compiling eval.c
+compiling load.c
+compiling proc.c
+compiling file.c
+file.c:421:51: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+            if (ts1.tv_nsec < ts2.tv_nsec) return INT2FIX(-1);
+                                                  ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+file.c:424:45: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+        if (ts1.tv_sec < ts2.tv_sec) return INT2FIX(-1);
+                                            ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+2 warnings generated.
+compiling gc.c
+compiling hash.c
+compiling inits.c
+compiling io.c
+compiling marshal.c
+compiling math.c
+compiling node.c
+compiling numeric.c
+numeric.c:1138:23: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    if (a < b) return INT2FIX(-1);
+                      ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+numeric.c:1180:13: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+            return INT2FIX(-1);
+                   ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+numeric.c:3086:10: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                return INT2FIX(-1);
+                       ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+numeric.c:3103:18: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+            else return INT2FIX(-1);
+                        ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+numeric.c:3173:9: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+        return INT2FIX(-1);
+               ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+numeric.c:3256:46: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+        return rb_integer_float_cmp(x, y) == INT2FIX(-1) ? Qtrue : Qfalse;
+                                             ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+numeric.c:3283:16: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+        return rel == INT2FIX(-1) || rel == INT2FIX(0) ? Qtrue : Qfalse;
+                      ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+numeric.c:3455:22: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+        if (val < 0) return INT2FIX(-1);
+                            ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+numeric.c:3650:68: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    return ruby_num_interval_step_size(from, RARRAY_AREF(args, 0), INT2FIX(-1), FALSE);
+                                                                   ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+numeric.c:4023:43: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    rb_define_const(rb_cFloat, "MIN_EXP", INT2FIX(DBL_MIN_EXP));
+                                          ^~~~~~~~~~~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+numeric.c:4037:46: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    rb_define_const(rb_cFloat, "MIN_10_EXP", INT2FIX(DBL_MIN_10_EXP));
+                                             ^~~~~~~~~~~~~~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+11 warnings generated.
+compiling object.c
+object.c:1663:9: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+        return INT2FIX(-1);
+               ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+1 warning generated.
+compiling pack.c
+compiling parse.c
+parse.y:1360:4: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                        nd_set_line((yyval.node), (yyvsp[(2) - (5)].num));
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./node.h:290:43: note: expanded from macro 'nd_set_line'
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                        ~~^
+parse.y:1372:4: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                        nd_set_line((yyval.node), tokline);
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./node.h:290:43: note: expanded from macro 'nd_set_line'
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                        ~~^
+parse.y:2602:5: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                                nd_set_line((yyvsp[(3) - (4)].node), (yyvsp[(2) - (4)].num));
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./node.h:290:43: note: expanded from macro 'nd_set_line'
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                        ~~^
+parse.y:2605:4: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                        nd_set_line((yyval.node), (yyvsp[(2) - (4)].num));
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./node.h:290:43: note: expanded from macro 'nd_set_line'
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                        ~~^
+parse.y:2906:4: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                        nd_set_line((yyval.node), (yyvsp[(4) - (6)].num));
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./node.h:290:43: note: expanded from macro 'nd_set_line'
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                        ~~^
+parse.y:2951:4: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                        nd_set_line((yyval.node), (yyvsp[(3) - (5)].num));
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./node.h:290:43: note: expanded from macro 'nd_set_line'
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                        ~~^
+parse.y:2972:4: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                        nd_set_line((yyval.node), (yyvsp[(1) - (6)].num));
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./node.h:290:43: note: expanded from macro 'nd_set_line'
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                        ~~^
+parse.y:2994:4: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                        nd_set_line((yyval.node), (yyvsp[(1) - (9)].num));
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./node.h:290:43: note: expanded from macro 'nd_set_line'
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                        ~~^
+parse.y:3481:4: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                        nd_set_line((yyval.node), (yyvsp[(4) - (6)].num));
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./node.h:290:43: note: expanded from macro 'nd_set_line'
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                        ~~^
+parse.y:3526:4: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                        nd_set_line((yyval.node), (yyvsp[(2) - (5)].num));
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./node.h:290:43: note: expanded from macro 'nd_set_line'
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                        ~~^
+parse.y:3604:4: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                        nd_set_line((yyval.node), (yyvsp[(4) - (5)].num));
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./node.h:290:43: note: expanded from macro 'nd_set_line'
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                        ~~^
+parse.y:3620:4: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                        nd_set_line((yyval.node), (yyvsp[(4) - (5)].num));
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./node.h:290:43: note: expanded from macro 'nd_set_line'
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                        ~~^
+parse.y:3644:4: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                        nd_set_line((yyval.node), (yyvsp[(3) - (4)].num));
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./node.h:290:43: note: expanded from macro 'nd_set_line'
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                        ~~^
+parse.y:3661:4: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                        nd_set_line((yyval.node), (yyvsp[(3) - (4)].num));
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./node.h:290:43: note: expanded from macro 'nd_set_line'
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                        ~~^
+parse.y:3711:4: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                        nd_set_line((yyval.node), (yyvsp[(2) - (5)].num));
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./node.h:290:43: note: expanded from macro 'nd_set_line'
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                        ~~^
+parse.y:3730:4: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                        nd_set_line((yyval.node), (yyvsp[(2) - (5)].num));
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./node.h:290:43: note: expanded from macro 'nd_set_line'
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                        ~~^
+parse.y:6388:5: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    nd_set_line(lex_strterm, ruby_sourceline);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./node.h:290:43: note: expanded from macro 'nd_set_line'
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                        ~~^
+parse.y:8304:5: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    nd_set_line(n, ruby_sourceline);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./node.h:290:43: note: expanded from macro 'nd_set_line'
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                        ~~^
+parse.y:8336:5: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    nd_set_line(node, nd_line(orig));
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./node.h:290:43: note: expanded from macro 'nd_set_line'
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                        ~~^
+19 warnings generated.
+compiling process.c
+process.c:1890:46: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                rb_hash_aset(h, INT2FIX(fd), INT2FIX(-1));
+                                             ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+1 warning generated.
+compiling random.c
+compiling range.c
+compiling rational.c
+rational.c:233:40: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    return rb_funcall(x, id_eqeq_p, 1, INT2FIX(-1));
+                                       ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+1 warning generated.
+compiling re.c
+compiling regcomp.c
+compiling regenc.c
+compiling regerror.c
+compiling regexec.c
+compiling regparse.c
+compiling regsyntax.c
+compiling ruby.c
+compiling safe.c
+compiling signal.c
+compiling sprintf.c
+compiling st.c
+compiling strftime.c
+compiling string.c
+string.c:2681:12: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    return INT2FIX(-1);
+           ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+1 warning generated.
+compiling struct.c
+compiling time.c
+time.c:1539:19: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+        if (lt(v, INT2NUM(INT_MIN)) || lt(INT2NUM(INT_MAX), v))
+            ~~~~~~^~~~~~~~~~~~~~~~~
+./include/ruby/ruby.h:1285:21: note: expanded from macro 'INT2NUM'
+# define INT2NUM(v) INT2FIX((int)(v))
+                    ^
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                               ^
+time.c:67:27: note: expanded from macro 'lt'
+#define lt(x,y) (cmp((x),(y)) < 0)
+                          ^
+time.c:2598:24: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    if (le(utc_offset, INT2FIX(-86400)) || ge(utc_offset, INT2FIX(86400)))
+        ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                               ^
+time.c:69:27: note: expanded from macro 'le'
+#define le(x,y) (cmp((x),(y)) <= 0)
+                          ^
+time.c:3335:12: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    return INT2FIX(-1);
+           ^~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+3 warnings generated.
+compiling transcode.c
+compiling util.c
+compiling variable.c
+compiling version.c
+compiling compile.c
+compile.c:5399:39: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                    ADD_INSN1(ret, line, putobject, INT2FIX(-1));
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                               ^
+compile.c:190:62: note: expanded from macro 'ADD_INSN1'
+           new_insn_body(iseq, (line), BIN(insn), 1, (VALUE)(op1)))
+                                                             ^~~
+compile.c:5407:35: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                ADD_INSN1(ret, line, putobject, INT2FIX(-1));
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+./include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                               ^
+compile.c:190:62: note: expanded from macro 'ADD_INSN1'
+           new_insn_body(iseq, (line), BIN(insn), 1, (VALUE)(op1)))
+                                                             ^~~
+2 warnings generated.
+compiling debug.c
+compiling iseq.c
+compiling vm.c
+In file included from vm.c:79:
+./vm_insnhelper.c:649:7: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                if (VM_FRAME_TYPE(cfp) == VM_FRAME_MAGIC_LAMBDA) {
+                    ^~~~~~~~~~~~~~~~~~
+./vm_core.h:772:43: note: expanded from macro 'VM_FRAME_TYPE'
+#define VM_FRAME_TYPE(cfp) ((cfp)->flag & VM_FRAME_MAGIC_MASK)
+                                          ^~~~~~~~~~~~~~~~~~~
+./vm_core.h:770:36: note: expanded from macro 'VM_FRAME_MAGIC_MASK'
+#define VM_FRAME_MAGIC_MASK   (~(~0<<VM_FRAME_MAGIC_MASK_BITS))
+                                 ~~^
+In file included from vm.c:79:
+./vm_insnhelper.c:719:8: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                        if (VM_FRAME_TYPE(cfp) == VM_FRAME_MAGIC_LAMBDA) {
+                            ^~~~~~~~~~~~~~~~~~
+./vm_core.h:772:43: note: expanded from macro 'VM_FRAME_TYPE'
+#define VM_FRAME_TYPE(cfp) ((cfp)->flag & VM_FRAME_MAGIC_MASK)
+                                          ^~~~~~~~~~~~~~~~~~~
+./vm_core.h:770:36: note: expanded from macro 'VM_FRAME_MAGIC_MASK'
+#define VM_FRAME_MAGIC_MASK   (~(~0<<VM_FRAME_MAGIC_MASK_BITS))
+                                 ~~^
+vm.c:298:6: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+        if (VM_FRAME_TYPE(th->cfp) != VM_FRAME_MAGIC_CFUNC) {
+            ^~~~~~~~~~~~~~~~~~~~~~
+./vm_core.h:772:43: note: expanded from macro 'VM_FRAME_TYPE'
+#define VM_FRAME_TYPE(cfp) ((cfp)->flag & VM_FRAME_MAGIC_MASK)
+                                          ^~~~~~~~~~~~~~~~~~~
+./vm_core.h:770:36: note: expanded from macro 'VM_FRAME_MAGIC_MASK'
+#define VM_FRAME_MAGIC_MASK   (~(~0<<VM_FRAME_MAGIC_MASK_BITS))
+                                 ~~^
+vm.c:1291:13: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    switch (VM_FRAME_TYPE(th->cfp)) {
+            ^~~~~~~~~~~~~~~~~~~~~~
+./vm_core.h:772:43: note: expanded from macro 'VM_FRAME_TYPE'
+#define VM_FRAME_TYPE(cfp) ((cfp)->flag & VM_FRAME_MAGIC_MASK)
+                                          ^~~~~~~~~~~~~~~~~~~
+./vm_core.h:770:36: note: expanded from macro 'VM_FRAME_MAGIC_MASK'
+#define VM_FRAME_MAGIC_MASK   (~(~0<<VM_FRAME_MAGIC_MASK_BITS))
+                                 ~~^
+vm.c:1449:19: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+            if (UNLIKELY(VM_FRAME_TYPE(th->cfp) == VM_FRAME_MAGIC_CFUNC)) {
+                         ^~~~~~~~~~~~~~~~~~~~~~
+./vm_core.h:772:43: note: expanded from macro 'VM_FRAME_TYPE'
+#define VM_FRAME_TYPE(cfp) ((cfp)->flag & VM_FRAME_MAGIC_MASK)
+                                          ^~~~~~~~~~~~~~~~~~~
+./vm_core.h:770:36: note: expanded from macro 'VM_FRAME_MAGIC_MASK'
+#define VM_FRAME_MAGIC_MASK   (~(~0<<VM_FRAME_MAGIC_MASK_BITS))
+                                 ~~^
+./vm_core.h:106:40: note: expanded from macro 'UNLIKELY'
+#define UNLIKELY(x) (__builtin_expect((x), 0))
+                                       ^
+5 warnings generated.
+compiling vm_dump.c
+vm_dump.c:48:13: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    switch (VM_FRAME_TYPE(cfp)) {
+            ^~~~~~~~~~~~~~~~~~
+./vm_core.h:772:43: note: expanded from macro 'VM_FRAME_TYPE'
+#define VM_FRAME_TYPE(cfp) ((cfp)->flag & VM_FRAME_MAGIC_MASK)
+                                          ^~~~~~~~~~~~~~~~~~~
+./vm_core.h:770:36: note: expanded from macro 'VM_FRAME_MAGIC_MASK'
+#define VM_FRAME_MAGIC_MASK   (~(~0<<VM_FRAME_MAGIC_MASK_BITS))
+                                 ~~^
+1 warning generated.
+compiling vm_backtrace.c
+vm_backtrace.c:473:11: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+        else if (RUBYVM_CFUNC_FRAME_P(cfp)) {
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+./vm_core.h:782:4: note: expanded from macro 'RUBYVM_CFUNC_FRAME_P'
+  (VM_FRAME_TYPE(cfp) == VM_FRAME_MAGIC_CFUNC)
+   ^~~~~~~~~~~~~~~~~~
+./vm_core.h:772:43: note: expanded from macro 'VM_FRAME_TYPE'
+#define VM_FRAME_TYPE(cfp) ((cfp)->flag & VM_FRAME_MAGIC_MASK)
+                                          ^~~~~~~~~~~~~~~~~~~
+./vm_core.h:770:36: note: expanded from macro 'VM_FRAME_MAGIC_MASK'
+#define VM_FRAME_MAGIC_MASK   (~(~0<<VM_FRAME_MAGIC_MASK_BITS))
+                                 ~~^
+1 warning generated.
+compiling vm_trace.c
+compiling thread.c
+compiling cont.c
+compiling ./enc/ascii.c
+compiling ./enc/us_ascii.c
+compiling ./enc/unicode.c
+compiling ./enc/utf_8.c
+compiling newline.c
+compiling ./missing/setproctitle.c
+compiling dmyext.c
+linking miniruby
+rbconfig.rb updated
+generating enc.mk
+compiling dln.c
+compiling localeinit.c
+creating verconf.h
+compiling loadpath.c
+generating prelude.c
+compiling prelude.c
+linking static-library libruby.2.1.0-static.a
+verifying static-library libruby.2.1.0-static.a
+linking shared-library libruby.2.1.0.dylib
+generating encdb.h
+encdb.h unchanged
+making enc
+compiling ./enc/encdb.c
+linking encoding encdb.bundle
+compiling ./enc/big5.c
+linking encoding big5.bundle
+compiling ./enc/cp949.c
+linking encoding cp949.bundle
+compiling ./enc/emacs_mule.c
+linking encoding emacs_mule.bundle
+compiling ./enc/euc_jp.c
+linking encoding euc_jp.bundle
+compiling ./enc/euc_kr.c
+linking encoding euc_kr.bundle
+compiling ./enc/euc_tw.c
+linking encoding euc_tw.bundle
+compiling ./enc/gb2312.c
+linking encoding gb2312.bundle
+compiling ./enc/gb18030.c
+linking encoding gb18030.bundle
+compiling ./enc/gbk.c
+linking encoding gbk.bundle
+compiling ./enc/iso_8859_1.c
+linking encoding iso_8859_1.bundle
+compiling ./enc/iso_8859_2.c
+linking encoding iso_8859_2.bundle
+compiling ./enc/iso_8859_3.c
+linking encoding iso_8859_3.bundle
+compiling ./enc/iso_8859_4.c
+linking encoding iso_8859_4.bundle
+compiling ./enc/iso_8859_5.c
+linking encoding iso_8859_5.bundle
+compiling ./enc/iso_8859_6.c
+linking encoding iso_8859_6.bundle
+compiling ./enc/iso_8859_7.c
+linking encoding iso_8859_7.bundle
+compiling ./enc/iso_8859_8.c
+linking encoding iso_8859_8.bundle
+compiling ./enc/iso_8859_9.c
+linking encoding iso_8859_9.bundle
+compiling ./enc/iso_8859_10.c
+linking encoding iso_8859_10.bundle
+compiling ./enc/iso_8859_11.c
+linking encoding iso_8859_11.bundle
+compiling ./enc/iso_8859_13.c
+linking encoding iso_8859_13.bundle
+compiling ./enc/iso_8859_14.c
+linking encoding iso_8859_14.bundle
+compiling ./enc/iso_8859_15.c
+linking encoding iso_8859_15.bundle
+compiling ./enc/iso_8859_16.c
+linking encoding iso_8859_16.bundle
+compiling ./enc/koi8_r.c
+linking encoding koi8_r.bundle
+compiling ./enc/koi8_u.c
+linking encoding koi8_u.bundle
+compiling ./enc/shift_jis.c
+linking encoding shift_jis.bundle
+compiling ./enc/utf_16be.c
+linking encoding utf_16be.bundle
+compiling ./enc/utf_16le.c
+linking encoding utf_16le.bundle
+compiling ./enc/utf_32be.c
+linking encoding utf_32be.bundle
+compiling ./enc/utf_32le.c
+linking encoding utf_32le.bundle
+compiling ./enc/windows_31j.c
+linking encoding windows_31j.bundle
+compiling ./enc/windows_1250.c
+linking encoding windows_1250.bundle
+compiling ./enc/windows_1251.c
+linking encoding windows_1251.bundle
+compiling ./enc/windows_1252.c
+linking encoding windows_1252.bundle
+making srcs under enc
+make[1]: Nothing to be done for `srcs'.
+generating transdb.h
+transdb.h unchanged
+making trans
+compiling ./enc/trans/transdb.c
+linking transcoder transdb.bundle
+compiling ./enc/trans/big5.c
+linking transcoder big5.bundle
+compiling ./enc/trans/chinese.c
+linking transcoder chinese.bundle
+compiling ./enc/trans/emoji.c
+linking transcoder emoji.bundle
+compiling ./enc/trans/emoji_iso2022_kddi.c
+linking transcoder emoji_iso2022_kddi.bundle
+compiling ./enc/trans/emoji_sjis_docomo.c
+linking transcoder emoji_sjis_docomo.bundle
+compiling ./enc/trans/emoji_sjis_kddi.c
+linking transcoder emoji_sjis_kddi.bundle
+compiling ./enc/trans/emoji_sjis_softbank.c
+linking transcoder emoji_sjis_softbank.bundle
+compiling ./enc/trans/escape.c
+linking transcoder escape.bundle
+compiling ./enc/trans/gb18030.c
+linking transcoder gb18030.bundle
+compiling ./enc/trans/gbk.c
+linking transcoder gbk.bundle
+compiling ./enc/trans/iso2022.c
+linking transcoder iso2022.bundle
+compiling ./enc/trans/japanese.c
+linking transcoder japanese.bundle
+compiling ./enc/trans/japanese_euc.c
+linking transcoder japanese_euc.bundle
+compiling ./enc/trans/japanese_sjis.c
+linking transcoder japanese_sjis.bundle
+compiling ./enc/trans/korean.c
+linking transcoder korean.bundle
+compiling ./enc/trans/single_byte.c
+linking transcoder single_byte.bundle
+compiling ./enc/trans/utf8_mac.c
+linking transcoder utf8_mac.bundle
+compiling ./enc/trans/utf_16_32.c
+linking transcoder utf_16_32.bundle
+making encs
+generating makefile exts.mk
+configuring -test-/array/resize
+configuring -test-/bignum
+configuring -test-/bug-3571
+configuring -test-/bug-3662
+configuring -test-/bug-5832
+configuring -test-/bug_reporter
+configuring -test-/class
+configuring -test-/debug
+configuring -test-/dln/empty
+configuring -test-/exception
+configuring -test-/fatal
+configuring -test-/file
+configuring -test-/funcall
+configuring -test-/iter
+configuring -test-/load/dot.dot
+configuring -test-/marshal/compat
+configuring -test-/marshal/usr
+configuring -test-/method
+configuring -test-/num2int
+configuring -test-/old_thread_select
+configuring -test-/path_to_class
+configuring -test-/postponed_job
+configuring -test-/printf
+configuring -test-/rational
+configuring -test-/recursion
+configuring -test-/st/numhash
+configuring -test-/st/update
+configuring -test-/string
+configuring -test-/struct
+configuring -test-/symbol
+configuring -test-/tracepoint
+configuring -test-/typeddata
+configuring -test-/wait_for_single_fd
+configuring -test-/win32/dln
+Failed to configure -test-/win32/dln. It will not be installed.
+configuring -test-/win32/fd_setsize
+Failed to configure -test-/win32/fd_setsize. It will not be installed.
+configuring bigdecimal
+configuring continuation
+configuring coverage
+configuring date
+configuring dbm
+header: ndbm.h
+library: libc
+configuring digest
+configuring digest/bubblebabble
+configuring digest/md5
+configuring digest/rmd160
+configuring digest/sha1
+configuring digest/sha2
+configuring dl
+configuring dl/callback
+configuring etc
+configuring fcntl
+configuring fiber
+configuring fiddle
+configuring gdbm
+Failed to configure gdbm. It will not be installed.
+configuring io/console
+configuring io/nonblock
+configuring io/wait
+configuring json
+configuring json/generator
+configuring json/parser
+configuring mathn/complex
+configuring mathn/rational
+configuring nkf
+configuring objspace
+configuring openssl
+configuring pathname
+configuring psych
+configuring pty
+configuring racc/cparse
+configuring rbconfig/sizeof
+configuring readline
+configuring ripper
+configuring sdbm
+configuring socket
+configuring stringio
+configuring strscan
+configuring syslog
+configuring thread
+configuring tk
+...........
+check struct members..
+check libraries....
+Use ActiveTcl libraries (if available).
+Search tclConfig.sh and tkConfig.sh....................................
+Valid [tclConfig.sh, tkConfig.sh] are found in [["/System/Library/Frameworks/Tcl.framework", "/System/Library/Frameworks/Tk.framework"], ["/usr/lib", "/usr/lib"], ["/System/Library/Frameworks/Tcl.framework/Versions/Current", "/System/Library/Frameworks/Tk.framework/Versions/Current"], ["/System/Library/Frameworks/Tcl.framework/Versions/8.5", "/System/Library/Frameworks/Tk.framework/Versions/8.5"], ["/System/Library/Frameworks/Tcl.framework/Versions/8.4", "/System/Library/Frameworks/Tk.framework/Versions/8.4"]]
+Use [tclConfig.sh, tkConfig.sh] == ["/System/Library/Frameworks/Tcl.framework/tclConfig.sh", "/System/Library/Frameworks/Tk.framework/tkConfig.sh"]
+Use MacOS X Frameworks.
+
+Find Tcl/Tk libraries. Make tcltklib.so which is required by Ruby/Tk.
+configuring tk/tkutil
+configuring win32
+Failed to configure win32. It will not be installed.
+configuring win32ole
+Failed to configure win32ole. It will not be installed.
+configuring zlib
+compiling resize.c
+linking shared-object -test-/array/resize.bundle
+installing default resize libraries
+compiling big2str.c
+compiling bigzero.c
+compiling div.c
+compiling init.c
+compiling intpack.c
+compiling mul.c
+compiling str2big.c
+linking shared-object -test-/bignum.bundle
+installing default bignum libraries
+compiling bug.c
+linking shared-object -test-/bug-3571/bug.bundle
+installing default bug libraries
+compiling bug.c
+linking shared-object -test-/bug-3662/bug.bundle
+installing default bug libraries
+compiling bug.c
+linking shared-object -test-/bug-5832/bug.bundle
+installing default bug libraries
+compiling bug_reporter.c
+linking shared-object -test-/bug_reporter/bug_reporter.bundle
+installing default bug_reporter libraries
+compiling class2name.c
+compiling init.c
+linking shared-object -test-/class.bundle
+installing default class libraries
+compiling init.c
+compiling inspector.c
+compiling profile_frames.c
+linking shared-object -test-/debug.bundle
+installing default debug libraries
+compiling empty.c
+linking shared-object -test-/dln/empty.bundle
+installing default empty libraries
+compiling dataerror.c
+compiling enc_raise.c
+compiling ensured.c
+compiling init.c
+linking shared-object -test-/exception.bundle
+installing default exception libraries
+compiling rb_fatal.c
+linking shared-object -test-/fatal/rb_fatal.bundle
+installing default rb_fatal libraries
+compiling init.c
+compiling stat.c
+linking shared-object -test-/file.bundle
+installing default file libraries
+compiling passing_block.c
+linking shared-object -test-/funcall/funcall.bundle
+installing default funcall libraries
+compiling break.c
+compiling init.c
+compiling yield.c
+linking shared-object -test-/iter.bundle
+installing default iter libraries
+compiling dot.dot.c
+linking shared-object -test-/load/dot.dot/dot.dot.bundle
+installing default dot.dot libraries
+compiling usrcompat.c
+linking shared-object -test-/marshal/compat.bundle
+installing default compat libraries
+compiling usrmarshal.c
+linking shared-object -test-/marshal/usr.bundle
+installing default usr libraries
+compiling arity.c
+compiling init.c
+linking shared-object -test-/method.bundle
+installing default method libraries
+compiling num2int.c
+linking shared-object -test-/num2int/num2int.bundle
+installing default num2int libraries
+compiling old_thread_select.c
+linking shared-object -test-/old_thread_select/old_thread_select.bundle
+installing default old_thread_select libraries
+compiling path_to_class.c
+linking shared-object -test-/path_to_class/path_to_class.bundle
+installing default path_to_class libraries
+compiling postponed_job.c
+linking shared-object -test-/postponed_job.bundle
+installing default postponed_job libraries
+compiling printf.c
+linking shared-object -test-/printf.bundle
+installing default printf libraries
+compiling rat.c
+linking shared-object -test-/rational.bundle
+installing default rational libraries
+compiling recursion.c
+linking shared-object -test-/recursion.bundle
+installing default recursion libraries
+compiling numhash.c
+linking shared-object -test-/st/numhash.bundle
+installing default numhash libraries
+compiling update.c
+linking shared-object -test-/st/update.bundle
+installing default update libraries
+compiling coderange.c
+compiling cstr.c
+compiling ellipsize.c
+compiling enc_associate.c
+compiling enc_str_buf_cat.c
+compiling init.c
+compiling modify.c
+compiling normalize.c
+compiling qsort.c
+compiling set_len.c
+linking shared-object -test-/string/string.bundle
+installing default string libraries
+compiling init.c
+compiling member.c
+linking shared-object -test-/struct.bundle
+installing default struct libraries
+compiling init.c
+compiling intern.c
+compiling type.c
+linking shared-object -test-/symbol.bundle
+installing default symbol libraries
+compiling gc_hook.c
+compiling tracepoint.c
+linking shared-object -test-/tracepoint.bundle
+installing default tracepoint libraries
+compiling typeddata.c
+linking shared-object -test-/typeddata/typeddata.bundle
+installing default typeddata libraries
+compiling wait_for_single_fd.c
+linking shared-object -test-/wait_for_single_fd/wait_for_single_fd.bundle
+installing default wait_for_single_fd libraries
+make[2]: Nothing to be done for `all'.
+make[2]: Nothing to be done for `all'.
+compiling bigdecimal.c
+bigdecimal.c:615:31: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    if (VpIsNegInf(p)) return INT2FIX(-1);
+                              ^~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+bigdecimal.c:673:48: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+            numerator = rb_funcall(numerator, '*', 1, INT2FIX(-1));
+                                                      ^~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+bigdecimal.c:761:44: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+        numerator = rb_funcall(numerator, '*', 1, INT2FIX(-1));
+                                                  ^~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+bigdecimal.c:3199:59: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    rb_define_const(rb_cBigDecimal, "SIGN_NEGATIVE_ZERO", INT2FIX(VP_SIGN_NEGATIVE_ZERO));
+                                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+bigdecimal.c:3205:61: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    rb_define_const(rb_cBigDecimal, "SIGN_NEGATIVE_FINITE", INT2FIX(VP_SIGN_NEGATIVE_FINITE));
+                                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+bigdecimal.c:3211:63: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    rb_define_const(rb_cBigDecimal, "SIGN_NEGATIVE_INFINITE", INT2FIX(VP_SIGN_NEGATIVE_INFINITE));
+                                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+6 warnings generated.
+linking shared-object bigdecimal.bundle
+installing default bigdecimal libraries
+compiling continuation.c
+linking shared-object continuation.bundle
+installing default continuation libraries
+compiling coverage.c
+linking shared-object coverage.bundle
+installing default coverage libraries
+compiling date_core.c
+date_core.c:3303:9: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    y = INT2FIX(-4712);
+        ^~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+date_core.c:3371:9: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    y = INT2FIX(-4712);
+        ^~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+date_core.c:3448:9: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    y = INT2FIX(-4712);
+        ^~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+date_core.c:6162:27: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+        date = d_lite_plus(date, INT2FIX(-1));
+                                 ^~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+date_core.c:6207:11: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                        return INT2FIX(-1);
+                               ^~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+date_core.c:6214:14: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                    return INT2FIX(-1);
+                           ^~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+date_core.c:6221:10: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                return INT2FIX(-1);
+                       ^~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+date_core.c:6228:13: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+            return INT2FIX(-1);
+                   ^~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+date_core.c:6280:14: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                    return INT2FIX(-1);
+                           ^~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+date_core.c:6287:10: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                return INT2FIX(-1);
+                       ^~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+date_core.c:7229:9: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    y = INT2FIX(-4712);
+        ^~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+date_core.c:7305:9: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    y = INT2FIX(-4712);
+        ^~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+date_core.c:7402:9: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    y = INT2FIX(-4712);
+        ^~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+13 warnings generated.
+compiling date_parse.c
+compiling date_strftime.c
+compiling date_strptime.c
+linking shared-object date_core.bundle
+installing default date_core libraries
+compiling dbm.c
+linking shared-object dbm.bundle
+installing default dbm libraries
+compiling digest.c
+linking shared-object digest.bundle
+installing digest libraries
+installing default digest libraries
+compiling bubblebabble.c
+linking shared-object digest/bubblebabble.bundle
+installing default bubblebabble libraries
+compiling md5init.c
+compiling md5ossl.c
+linking shared-object digest/md5.bundle
+installing default md5 libraries
+compiling rmd160init.c
+compiling rmd160.c
+linking shared-object digest/rmd160.bundle
+installing default rmd160 libraries
+compiling sha1init.c
+compiling sha1ossl.c
+linking shared-object digest/sha1.bundle
+installing default sha1 libraries
+compiling sha2init.c
+compiling sha2ossl.c
+linking shared-object digest/sha2.bundle
+installing default sha2 libraries
+compiling cfunc.c
+compiling cptr.c
+cptr.c:438:36: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    return diff > 0 ? INT2NUM(1) : INT2NUM(-1);
+                                   ^~~~~~~~~~~
+../.././include/ruby/ruby.h:1285:21: note: expanded from macro 'INT2NUM'
+# define INT2NUM(v) INT2FIX((int)(v))
+                    ^~~~~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+1 warning generated.
+compiling dl.c
+dl.c:350:45: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    rb_define_const(rb_mDL, "TYPE_SIZE_T",  INT2NUM(DLTYPE_SIZE_T));
+                                            ^~~~~~~~~~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:1285:21: note: expanded from macro 'INT2NUM'
+# define INT2NUM(v) INT2FIX((int)(v))
+                    ^~~~~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+dl.c:374:47: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    rb_define_const(rb_mDL, "TYPE_UINTPTR_T", INT2NUM(DLTYPE_UINTPTR_T));
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:1285:21: note: expanded from macro 'INT2NUM'
+# define INT2NUM(v) INT2FIX((int)(v))
+                    ^~~~~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+2 warnings generated.
+compiling handle.c
+linking shared-object dl.bundle
+installing dl libraries
+installing default dl libraries
+compiling callback.c
+compiling callback-0.c
+compiling callback-1.c
+compiling callback-2.c
+compiling callback-3.c
+compiling callback-4.c
+compiling callback-5.c
+compiling callback-6.c
+compiling callback-7.c
+compiling callback-8.c
+linking shared-object dl/callback.bundle
+installing default callback libraries
+compiling etc.c
+linking shared-object etc.bundle
+installing default etc libraries
+compiling fcntl.c
+linking shared-object fcntl.bundle
+installing default fcntl libraries
+compiling fiber.c
+linking shared-object fiber.bundle
+installing default fiber libraries
+compiling closure.c
+compiling conversions.c
+compiling fiddle.c
+fiddle.c:233:47: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    rb_define_const(mFiddle, "TYPE_SIZE_T",   INT2NUM(TYPE_SIZE_T));
+                                              ^~~~~~~~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:1285:21: note: expanded from macro 'INT2NUM'
+# define INT2NUM(v) INT2FIX((int)(v))
+                    ^~~~~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+fiddle.c:257:49: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    rb_define_const(mFiddle, "TYPE_UINTPTR_T",  INT2NUM(TYPE_UINTPTR_T));
+                                                ^~~~~~~~~~~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:1285:21: note: expanded from macro 'INT2NUM'
+# define INT2NUM(v) INT2FIX((int)(v))
+                    ^~~~~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+2 warnings generated.
+compiling function.c
+compiling handle.c
+compiling pointer.c
+pointer.c:478:36: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    return diff > 0 ? INT2NUM(1) : INT2NUM(-1);
+                                   ^~~~~~~~~~~
+../.././include/ruby/ruby.h:1285:21: note: expanded from macro 'INT2NUM'
+# define INT2NUM(v) INT2FIX((int)(v))
+                    ^~~~~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+1 warning generated.
+linking shared-object fiddle.bundle
+installing default fiddle libraries
+make[2]: Nothing to be done for `all'.
+compiling console.c
+linking shared-object io/console.bundle
+installing default console libraries
+compiling nonblock.c
+linking shared-object io/nonblock.bundle
+installing default nonblock libraries
+compiling wait.c
+linking shared-object io/wait.bundle
+installing default wait libraries
+installing default libraries
+compiling generator.c
+linking shared-object json/ext/generator.bundle
+installing default generator libraries
+compiling parser.c
+linking shared-object json/ext/parser.bundle
+installing default parser libraries
+compiling complex.c
+linking shared-object mathn/complex.bundle
+installing default complex libraries
+compiling rational.c
+linking shared-object mathn/rational.bundle
+installing default rational libraries
+compiling nkf.c
+linking shared-object nkf.bundle
+installing default nkf libraries
+compiling object_tracing.c
+compiling objspace.c
+compiling objspace_dump.c
+linking shared-object objspace.bundle
+installing default objspace libraries
+compiling openssl_missing.c
+compiling ossl.c
+compiling ossl_asn1.c
+compiling ossl_bio.c
+compiling ossl_bn.c
+compiling ossl_cipher.c
+compiling ossl_config.c
+compiling ossl_digest.c
+compiling ossl_engine.c
+compiling ossl_hmac.c
+compiling ossl_ns_spki.c
+compiling ossl_ocsp.c
+ossl_ocsp.c:749:5: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    DefOCSPConst(REVOKED_STATUS_NOSTATUS);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ossl_ocsp.c:740:52: note: expanded from macro 'DefOCSPConst'
+#define DefOCSPConst(x) rb_define_const(mOCSP, #x, INT2NUM(OCSP_##x))
+                                                   ^~~~~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:1285:21: note: expanded from macro 'INT2NUM'
+# define INT2NUM(v) INT2FIX((int)(v))
+                    ^~~~~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+1 warning generated.
+compiling ossl_pkcs12.c
+compiling ossl_pkcs5.c
+compiling ossl_pkcs7.c
+compiling ossl_pkey.c
+compiling ossl_pkey_dh.c
+compiling ossl_pkey_dsa.c
+compiling ossl_pkey_ec.c
+compiling ossl_pkey_rsa.c
+compiling ossl_rand.c
+compiling ossl_ssl.c
+ossl_ssl.c:2266:5: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    ossl_ssl_def_const(OP_ALL);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~
+ossl_ssl.c:2244:57: note: expanded from macro 'ossl_ssl_def_const'
+#define ossl_ssl_def_const(x) rb_define_const(mSSL, #x, INT2NUM(SSL_##x))
+                                                        ^~~~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:1285:21: note: expanded from macro 'INT2NUM'
+# define INT2NUM(v) INT2FIX((int)(v))
+                    ^~~~~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+1 warning generated.
+compiling ossl_ssl_session.c
+compiling ossl_x509.c
+compiling ossl_x509attr.c
+compiling ossl_x509cert.c
+compiling ossl_x509crl.c
+compiling ossl_x509ext.c
+compiling ossl_x509name.c
+ossl_x509name.c:323:28: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    if (result < 0) return INT2FIX(-1);
+                           ^~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+1 warning generated.
+compiling ossl_x509req.c
+compiling ossl_x509revoked.c
+compiling ossl_x509store.c
+linking shared-object openssl.bundle
+installing default openssl libraries
+compiling pathname.c
+pathname.c:146:24: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                return INT2FIX(-1);
+                       ^~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+pathname.c:154:16: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+        return INT2FIX(-1);
+               ^~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+2 warnings generated.
+linking shared-object pathname.bundle
+installing default pathname libraries
+compiling psych.c
+compiling psych_emitter.c
+compiling psych_parser.c
+compiling psych_to_ruby.c
+compiling psych_yaml_tree.c
+linking shared-object psych.bundle
+installing default psych libraries
+compiling pty.c
+linking shared-object pty.bundle
+installing default pty libraries
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+installing default cparse libraries
+compiling sizes.c
+linking shared-object rbconfig/sizeof.bundle
+installing default sizeof libraries
+compiling readline.c
+linking shared-object readline.bundle
+installing default readline libraries
+compiling ripper.c
+ripper.y:6388:5: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    nd_set_line(lex_strterm, ruby_sourceline);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../node.h:290:43: note: expanded from macro 'nd_set_line'
+    RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                        ~~^
+1 warning generated.
+linking shared-object ripper.bundle
+installing default ripper libraries
+checking ../.././parse.y and ../.././ext/ripper/eventids2.c
+compiling _sdbm.c
+compiling init.c
+linking shared-object sdbm.bundle
+installing default sdbm libraries
+generating constant definitions
+compiling init.c
+compiling constants.c
+compiling basicsocket.c
+compiling socket.c
+compiling ipsocket.c
+compiling tcpsocket.c
+compiling tcpserver.c
+compiling sockssocket.c
+compiling udpsocket.c
+compiling unixsocket.c
+compiling unixserver.c
+compiling option.c
+compiling ancdata.c
+compiling raddrinfo.c
+compiling ifaddr.c
+linking shared-object socket.bundle
+installing default socket libraries
+compiling stringio.c
+linking shared-object stringio.bundle
+installing default stringio libraries
+compiling strscan.c
+linking shared-object strscan.bundle
+installing default strscan libraries
+compiling syslog.c
+linking shared-object syslog.bundle
+installing default syslog libraries
+compiling thread.c
+linking shared-object thread.bundle
+installing default thread libraries
+compiling stubs.c
+compiling tcltklib.c
+tcltklib.c:10854:43: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    rb_define_const(ev_flag, "ALL",       INT2FIX(TCL_ALL_EVENTS));
+                                          ^~~~~~~~~~~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+1 warning generated.
+linking shared-object tcltklib.bundle
+installing tcltklib libraries
+installing default tcltklib libraries
+compiling tkutil.c
+linking shared-object tkutil.bundle
+installing default tkutil libraries
+make[2]: Nothing to be done for `all'.
+make[2]: Nothing to be done for `all'.
+compiling zlib.c
+zlib.c:4311:7: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+                    INT2FIX(Z_DEFAULT_COMPRESSION));
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../.././include/ruby/ruby.h:231:48: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                            ~~~~~~~~~~~~~~~~~~~^
+1 warning generated.
+linking shared-object zlib.bundle
+installing default zlib libraries
+linking shared-library libruby.2.1.0.dylib
+linking ruby
