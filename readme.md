@@ -10,44 +10,44 @@ The idea of my setup is to have all my config in one centralised place. This in 
 
 #### Pakcage Managers
 
-* Homebrew
+* Homebrew \s
     A centrialised package manager which contains a list of useful settings or languages
-* RVM
+* RVM \s
     A Ruby version manager if I ever decide to work on a ruby project
-* NVM
+* NVM \s
     A Node version manager to quickly download, install and switch node
 
-<hr/>
+- - -
 
 #### Terminal
 
-* HyperTerm
+* HyperTerm \s
     My personal choice of terminal because of the Hyper package manager and its look
 
-* iTerm
+* iTerm \s
     De-facto go to terminal on Mac
 
-<hr/>
+- - -
 
 #### Envoiroment tools
 
-* Valet
+* Valet \s
     Valet is from Laravel as a new way os setting up a localhost without much configuration
-* Docker
+* Docker \s
     Docker is instaled via the Docker app
 
-<hr/>
+- - -
 
 #### Command Line Shell
 
-* Bash
+* Bash \s
     De-facto command Line Shell, useful when I am SSH into my pesonal servers
-* Zsh
+* Zsh \s
     Current Command Line Shell that I use, great when Oh-My-Zsh is installed
-* Fish
+* Fish \s
     Alterate Command Line Shell that I want to use
 
-<hr/>
+- - -
 
 ### Homebrew package list:
 
