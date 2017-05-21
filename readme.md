@@ -10,42 +10,42 @@ The idea of my setup is to have all my config in one centralised place. This in 
 
 #### Pakcage Managers
 
-* Homebrew \s
-    A centrialised package manager which contains a list of useful settings or languages
-* RVM \s
-    A Ruby version manager if I ever decide to work on a ruby project
-* NVM \s
-    A Node version manager to quickly download, install and switch node
+* Homebrew <br/>
+    &nbsp; A centrialised package manager which contains a list of useful settings or languages
+* RVM <br/>
+    &nbsp; A Ruby version manager if I ever decide to work on a ruby project
+* NVM <br/>
+    &nbsp; A Node version manager to quickly download, install and switch node
 
 - - -
 
 #### Terminal
 
-* HyperTerm \s
-    My personal choice of terminal because of the Hyper package manager and its look
+* HyperTerm <br/>
+    &nbsp; My personal choice of terminal because of the Hyper package manager and its look
 
-* iTerm \s
-    De-facto go to terminal on Mac
+* iTerm <br/>
+    &nbsp; De-facto go to terminal on Mac
 
 - - -
 
 #### Envoiroment tools
 
-* Valet \s
-    Valet is from Laravel as a new way os setting up a localhost without much configuration
-* Docker \s
-    Docker is instaled via the Docker app
+* Valet <br/>
+    &nbsp; Valet is from Laravel as a new way os setting up a localhost without much configuration
+* Docker <br/>
+    &nbsp; Docker is instaled via the Docker app
 
 - - -
 
 #### Command Line Shell
 
-* Bash \s
-    De-facto command Line Shell, useful when I am SSH into my pesonal servers
-* Zsh \s
-    Current Command Line Shell that I use, great when Oh-My-Zsh is installed
-* Fish \s
-    Alterate Command Line Shell that I want to use
+* Bash <br/>
+    &nbsp; De-facto command Line Shell, useful when I am SSH into my pesonal servers
+* Zsh <br/>
+    &nbsp; Current Command Line Shell that I use, great when Oh-My-Zsh is installed
+* Fish <br/>
+    &nbsp; Alterate Command Line Shell that I want to use
 
 - - -
 
