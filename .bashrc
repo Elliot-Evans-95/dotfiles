@@ -8,3 +8,5 @@
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
+
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh

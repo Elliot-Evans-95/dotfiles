@@ -1,3 +1,0 @@
-export PATH="/Users/elliot/.rvm/gems/ruby-2.1.10@global/bin:/Users/elliot/.rvm/rubies/ruby-2.1.10/bin:/Users/elliot/.rvm/bin:/usr/local/opt/pkg-config/bin:$PATH"
-export GEM_PATH="/Users/elliot/.gem/ruby/2.1.0:/Users/elliot/.rvm/rubies/ruby-2.1.10/lib/ruby/gems/2.1.0:/Users/elliot/.rvm/gems/ruby-2.1.10@global"
-export GEM_HOME="/Users/elliot/.rvm/gems/ruby-2.1.10@global"

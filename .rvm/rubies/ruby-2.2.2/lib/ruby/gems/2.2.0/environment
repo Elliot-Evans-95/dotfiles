@@ -1,8 +1,0 @@
-export PATH="/Users/elliot/.rvm/gems/ruby-2.2.2@global/bin:/Users/elliot/.rvm/rubies/ruby-2.2.2/bin:$PATH"
-export GEM_HOME='/Users/elliot/.rvm/gems/ruby-2.2.2@global'
-export GEM_PATH='/Users/elliot/.rvm/gems/ruby-2.2.2@global'
-export MY_RUBY_HOME='/Users/elliot/.rvm/rubies/ruby-2.2.2'
-export IRBRC='/Users/elliot/.rvm/rubies/ruby-2.2.2/.irbrc'
-unset MAGLEV_HOME
-unset RBXOPT
-export RUBY_VERSION='ruby-2.2.2'
