@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/elliot/.oh-my-zsh
+export ZSH=/Users/username/.oh-my-zsh
 
 # Set name of the theme to load.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
