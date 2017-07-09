@@ -9,5 +9,6 @@ if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
-PATH=/usr/local/sbin:$PATH
+export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+#PATH=/usr/local/sbin:$PATH
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh

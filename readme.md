@@ -102,3 +102,14 @@ The idea of my setup is to have all my config in one centralised place. This in 
 ### Purpose
 
 To hold all my setup to be able to pull it into other machines
+
+### Install
+
+To use the dotfiles clone the repo and them create a symbolic link to the files
+
+~~~~ 
+ln -sv “~/.dotfiles/git/.bashrc ~
+ln -sv “~/.dotfiles/git/.zshrc ~
+ln -sv “~/.dotfiles/git/.hyper.js ~
+ln -sv “~/.dotfiles/git/.gitconfig” ~
+~~~~ 
