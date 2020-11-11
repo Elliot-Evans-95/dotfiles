@@ -1,0 +1,26 @@
+2020-10-19 18:04:27,704 DEBUG    root            Loaded Command Group: [u'gcloud', u'components']
+2020-10-19 18:04:27,722 DEBUG    root            Loaded Command Group: [u'gcloud', u'components', u'list']
+2020-10-19 18:04:27,728 DEBUG    root            Running [gcloud.components.list] with arguments: [--filter: "id:app-engine-java", --format: "json", --only-local-state: "True"]
+2020-10-19 18:04:27,752 INFO     ___FILE_ONLY___ 
+Your current Cloud SDK version is: 314.0.0
+
+2020-10-19 18:04:27,755 INFO     root            Display format: "table[box,title="Components"](name:label=Name,id:label=ID,size.size(zero="",min=1048576):label=Size:align=right) json"
+2020-10-19 18:04:27,758 INFO     ___FILE_ONLY___ [
+  {
+2020-10-19 18:04:27,758 INFO     ___FILE_ONLY___ 
+    "current_version_string": "1.9.82",
+2020-10-19 18:04:27,759 INFO     ___FILE_ONLY___ 
+    "id": "app-engine-java",
+2020-10-19 18:04:27,759 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-10-19 18:04:27,759 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-10-19 18:04:27,759 INFO     ___FILE_ONLY___ 
+    "name": "gcloud app Java Extensions",
+2020-10-19 18:04:27,759 INFO     ___FILE_ONLY___ 
+    "size": null
+2020-10-19 18:04:27,759 INFO     ___FILE_ONLY___ 
+  }
+2020-10-19 18:04:27,760 INFO     ___FILE_ONLY___ 
+]
+

@@ -1,0 +1,6 @@
+2020-10-26 16:44:03,691 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2020-10-26 16:44:03,699 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'get_value']
+2020-10-26 16:44:03,703 DEBUG    root            Running [gcloud.config.get-value] with arguments: [SECTION/PROPERTY: "account"]
+2020-10-26 16:44:03,705 INFO     root            Display format: "value(.)"
+2020-10-26 16:44:03,705 INFO     ___FILE_ONLY___ elliot@mercarto.com
+

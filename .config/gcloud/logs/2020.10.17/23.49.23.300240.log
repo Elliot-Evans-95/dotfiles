@@ -1,0 +1,38 @@
+2020-10-17 23:49:23,314 DEBUG    root            Loaded Command Group: [u'gcloud', u'components']
+2020-10-17 23:49:23,322 DEBUG    root            Loaded Command Group: [u'gcloud', u'components', u'list']
+2020-10-17 23:49:23,327 DEBUG    root            Running [gcloud.components.list] with arguments: [--filter: "state.name:Update Available", --format: "json"]
+2020-10-17 23:49:23,701 INFO     ___FILE_ONLY___ 
+Your current Cloud SDK version is: 313.0.1
+
+2020-10-17 23:49:23,702 INFO     ___FILE_ONLY___ The latest available version is: 314.0.0
+
+2020-10-17 23:49:23,702 INFO     ___FILE_ONLY___ 
+
+2020-10-17 23:49:23,717 INFO     root            Display format: "table[box,title="Components"](state.name:label=Status,name:label=Name,id:label=ID,size.size(zero="",min=1048576):label=Size:align=right) json"
+2020-10-17 23:49:23,721 INFO     ___FILE_ONLY___ [
+  {
+2020-10-17 23:49:23,722 INFO     ___FILE_ONLY___ 
+    "current_version_string": "2020.10.07",
+2020-10-17 23:49:23,722 INFO     ___FILE_ONLY___ 
+    "id": "core",
+2020-10-17 23:49:23,723 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-10-17 23:49:23,723 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-10-17 23:49:23,723 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "2020.10.09",
+2020-10-17 23:49:23,724 INFO     ___FILE_ONLY___ 
+    "name": "Cloud SDK Core Libraries",
+2020-10-17 23:49:23,724 INFO     ___FILE_ONLY___ 
+    "size": 15991025,
+2020-10-17 23:49:23,724 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-10-17 23:49:23,724 INFO     ___FILE_ONLY___ 
+      "name": "Update Available"
+2020-10-17 23:49:23,725 INFO     ___FILE_ONLY___ 
+    }
+2020-10-17 23:49:23,725 INFO     ___FILE_ONLY___ 
+  }
+2020-10-17 23:49:23,735 INFO     ___FILE_ONLY___ 
+]
+

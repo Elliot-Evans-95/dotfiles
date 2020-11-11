@@ -1,0 +1,26 @@
+2020-10-19 18:04:35,351 DEBUG    root            Loaded Command Group: [u'gcloud', u'components']
+2020-10-19 18:04:35,357 DEBUG    root            Loaded Command Group: [u'gcloud', u'components', u'list']
+2020-10-19 18:04:35,394 DEBUG    root            Running [gcloud.components.list] with arguments: [--filter: "id:minikube", --format: "json", --only-local-state: "True"]
+2020-10-19 18:04:35,434 INFO     ___FILE_ONLY___ 
+Your current Cloud SDK version is: 314.0.0
+
+2020-10-19 18:04:35,437 INFO     root            Display format: "table[box,title="Components"](name:label=Name,id:label=ID,size.size(zero="",min=1048576):label=Size:align=right) json"
+2020-10-19 18:04:35,439 INFO     ___FILE_ONLY___ [
+  {
+2020-10-19 18:04:35,440 INFO     ___FILE_ONLY___ 
+    "current_version_string": "1.12.3",
+2020-10-19 18:04:35,440 INFO     ___FILE_ONLY___ 
+    "id": "minikube",
+2020-10-19 18:04:35,440 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-10-19 18:04:35,440 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-10-19 18:04:35,440 INFO     ___FILE_ONLY___ 
+    "name": "Minikube",
+2020-10-19 18:04:35,440 INFO     ___FILE_ONLY___ 
+    "size": 0
+2020-10-19 18:04:35,440 INFO     ___FILE_ONLY___ 
+  }
+2020-10-19 18:04:35,441 INFO     ___FILE_ONLY___ 
+]
+

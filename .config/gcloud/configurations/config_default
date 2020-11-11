@@ -1,0 +1,8 @@
+[core]
+account = elliot@mercarto.com
+project = mercarto-staging
+
+[compute]
+zone = europe-west4-a
+region = europe-west4
+

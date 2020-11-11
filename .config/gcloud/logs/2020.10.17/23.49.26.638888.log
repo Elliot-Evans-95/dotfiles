@@ -1,0 +1,26 @@
+2020-10-17 23:49:26,646 DEBUG    root            Loaded Command Group: [u'gcloud', u'components']
+2020-10-17 23:49:26,651 DEBUG    root            Loaded Command Group: [u'gcloud', u'components', u'list']
+2020-10-17 23:49:26,655 DEBUG    root            Running [gcloud.components.list] with arguments: [--filter: "id:alpha", --format: "json", --only-local-state: "True"]
+2020-10-17 23:49:26,665 INFO     ___FILE_ONLY___ 
+Your current Cloud SDK version is: 313.0.1
+
+2020-10-17 23:49:26,677 INFO     root            Display format: "table[box,title="Components"](name:label=Name,id:label=ID,size.size(zero="",min=1048576):label=Size:align=right) json"
+2020-10-17 23:49:26,679 INFO     ___FILE_ONLY___ [
+  {
+2020-10-17 23:49:26,679 INFO     ___FILE_ONLY___ 
+    "current_version_string": "2019.05.17",
+2020-10-17 23:49:26,679 INFO     ___FILE_ONLY___ 
+    "id": "alpha",
+2020-10-17 23:49:26,679 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-10-17 23:49:26,679 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-10-17 23:49:26,680 INFO     ___FILE_ONLY___ 
+    "name": "gcloud Alpha Commands",
+2020-10-17 23:49:26,680 INFO     ___FILE_ONLY___ 
+    "size": null
+2020-10-17 23:49:26,680 INFO     ___FILE_ONLY___ 
+  }
+2020-10-17 23:49:26,680 INFO     ___FILE_ONLY___ 
+]
+

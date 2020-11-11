@@ -1,0 +1,13 @@
+2020-10-13 10:57:16,918 DEBUG    root            Loaded Command Group: [u'gcloud', u'components']
+2020-10-13 10:57:16,930 DEBUG    root            Loaded Command Group: [u'gcloud', u'components', u'list']
+2020-10-13 10:57:16,940 DEBUG    root            Running [gcloud.components.list] with arguments: [--filter: "state.name:Update Available", --format: "json"]
+2020-10-13 10:57:17,660 INFO     ___FILE_ONLY___ 
+Your current Cloud SDK version is: 313.0.1
+
+2020-10-13 10:57:17,660 INFO     ___FILE_ONLY___ The latest available version is: 313.0.1
+
+2020-10-13 10:57:17,660 INFO     ___FILE_ONLY___ 
+
+2020-10-13 10:57:17,788 INFO     root            Display format: "table[box,title="Components"](state.name:label=Status,name:label=Name,id:label=ID,size.size(zero="",min=1048576):label=Size:align=right) json"
+2020-10-13 10:57:17,887 INFO     ___FILE_ONLY___ []
+

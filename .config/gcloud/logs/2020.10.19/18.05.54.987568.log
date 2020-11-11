@@ -1,0 +1,26 @@
+2020-10-19 18:05:54,996 DEBUG    root            Loaded Command Group: [u'gcloud', u'components']
+2020-10-19 18:05:55,001 DEBUG    root            Loaded Command Group: [u'gcloud', u'components', u'list']
+2020-10-19 18:05:55,014 DEBUG    root            Running [gcloud.components.list] with arguments: [--filter: "id:beta", --format: "json", --only-local-state: "True"]
+2020-10-19 18:05:55,032 INFO     ___FILE_ONLY___ 
+Your current Cloud SDK version is: 314.0.0
+
+2020-10-19 18:05:55,034 INFO     root            Display format: "table[box,title="Components"](name:label=Name,id:label=ID,size.size(zero="",min=1048576):label=Size:align=right) json"
+2020-10-19 18:05:55,036 INFO     ___FILE_ONLY___ [
+  {
+2020-10-19 18:05:55,037 INFO     ___FILE_ONLY___ 
+    "current_version_string": "2019.05.17",
+2020-10-19 18:05:55,037 INFO     ___FILE_ONLY___ 
+    "id": "beta",
+2020-10-19 18:05:55,037 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-10-19 18:05:55,037 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-10-19 18:05:55,037 INFO     ___FILE_ONLY___ 
+    "name": "gcloud Beta Commands",
+2020-10-19 18:05:55,037 INFO     ___FILE_ONLY___ 
+    "size": null
+2020-10-19 18:05:55,037 INFO     ___FILE_ONLY___ 
+  }
+2020-10-19 18:05:55,038 INFO     ___FILE_ONLY___ 
+]
+

@@ -1,0 +1,62 @@
+2020-10-12 15:09:46,300 DEBUG    root            Loaded Command Group: [u'gcloud', u'components']
+2020-10-12 15:09:46,305 DEBUG    root            Loaded Command Group: [u'gcloud', u'components', u'list']
+2020-10-12 15:09:46,318 DEBUG    root            Running [gcloud.components.list] with arguments: [--filter: "state.name:Update Available", --format: "json"]
+2020-10-12 15:09:46,755 INFO     ___FILE_ONLY___ 
+Your current Cloud SDK version is: 306.0.0
+
+2020-10-12 15:09:46,756 INFO     ___FILE_ONLY___ The latest available version is: 313.0.1
+
+2020-10-12 15:09:46,756 INFO     ___FILE_ONLY___ 
+
+2020-10-12 15:09:46,778 INFO     root            Display format: "table[box,title="Components"](state.name:label=Status,name:label=Name,id:label=ID,size.size(zero="",min=1048576):label=Size:align=right) json"
+2020-10-12 15:09:46,779 INFO     ___FILE_ONLY___ [
+  {
+2020-10-12 15:09:46,780 INFO     ___FILE_ONLY___ 
+    "current_version_string": "2020.08.14",
+2020-10-12 15:09:46,780 INFO     ___FILE_ONLY___ 
+    "id": "core",
+2020-10-12 15:09:46,780 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-10-12 15:09:46,780 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-10-12 15:09:46,780 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "2020.10.07",
+2020-10-12 15:09:46,780 INFO     ___FILE_ONLY___ 
+    "name": "Cloud SDK Core Libraries",
+2020-10-12 15:09:46,780 INFO     ___FILE_ONLY___ 
+    "size": 15918546,
+2020-10-12 15:09:46,781 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-10-12 15:09:46,781 INFO     ___FILE_ONLY___ 
+      "name": "Update Available"
+2020-10-12 15:09:46,781 INFO     ___FILE_ONLY___ 
+    }
+2020-10-12 15:09:46,781 INFO     ___FILE_ONLY___ 
+  }
+2020-10-12 15:09:46,782 INFO     ___FILE_ONLY___ ,
+  {
+2020-10-12 15:09:46,782 INFO     ___FILE_ONLY___ 
+    "current_version_string": "1.9.81",
+2020-10-12 15:09:46,782 INFO     ___FILE_ONLY___ 
+    "id": "app-engine-java",
+2020-10-12 15:09:46,782 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-10-12 15:09:46,782 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-10-12 15:09:46,782 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "1.9.82",
+2020-10-12 15:09:46,783 INFO     ___FILE_ONLY___ 
+    "name": "gcloud app Java Extensions",
+2020-10-12 15:09:46,783 INFO     ___FILE_ONLY___ 
+    "size": 62357043,
+2020-10-12 15:09:46,783 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-10-12 15:09:46,783 INFO     ___FILE_ONLY___ 
+      "name": "Update Available"
+2020-10-12 15:09:46,783 INFO     ___FILE_ONLY___ 
+    }
+2020-10-12 15:09:46,783 INFO     ___FILE_ONLY___ 
+  }
+2020-10-12 15:09:46,797 INFO     ___FILE_ONLY___ 
+]
+

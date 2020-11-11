@@ -1,0 +1,21 @@
+2020-10-20 10:44:44,254 DEBUG    root            Loaded Command Group: ['gcloud', 'auth']
+2020-10-20 10:44:44,268 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'configure_docker']
+2020-10-20 10:44:44,272 DEBUG    root            Running [gcloud.auth.configure-docker] with arguments: [--quiet: "True"]
+2020-10-20 10:44:44,684 WARNING  root            Your config file at [/Users/elliotevans/.docker/config.json] contains these credential helper entries:
+
+{
+  "credHelpers": {
+    "gcr.io": "gcloud",
+    "asia.gcr.io": "gcloud",
+    "marketplace.gcr.io": "gcloud",
+    "staging-k8s.gcr.io": "gcloud",
+    "us.gcr.io": "gcloud",
+    "eu.gcr.io": "gcloud"
+  }
+}
+2020-10-20 10:44:44,695 INFO     ___FILE_ONLY___ Adding credentials for all GCR repositories.
+
+2020-10-20 10:44:44,695 WARNING  root            A long list of credential helpers may cause delays running 'docker build'. We recommend passing the registry name to configure only the registry you are using.
+2020-10-20 10:44:44,696 INFO     ___FILE_ONLY___ gcloud credential helpers already registered correctly.
+
+2020-10-20 10:44:44,698 INFO     root            Display format: "default"
